@@ -168,7 +168,7 @@ let has_break s = (* N.B. sets s.mandatory by side effect. *)
                                              s.l0_rewrite = SP -> true
   | (* LB8a *) _, ZWJ, _ -> false
   | (* LB9 implicitely entails  ¬(BK|CR|LF|NL|SP|ZW as X) × (CM|ZWJ) *)
-               _, x, (CM|ZWJ) when is_lb9_X s.l0_rewrite -> false
+               _, _x, (CM|ZWJ) when is_lb9_X s.l0_rewrite -> false
   | _ -> (* apply LB9/LB10 rewrite and match *)
       let l1 = if is_lb9_X s.l1_rewrite then s.l1_rewrite else s.l1 in
       let l0 = if is_lb9_X s.l0_rewrite then s.l0_rewrite else s.l0 in
