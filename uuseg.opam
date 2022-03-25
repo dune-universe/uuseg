@@ -9,7 +9,7 @@ bug-reports: "https://github.com/dbuenzli/uuseg/issues"
 license: ["ISC"]
 tags: ["unicode" "text" "segmentation" "org:erratique"]
 depends: ["ocaml" {>= "4.03.0"}
-          "dune"
+          "dune" {>= "1.10"}
           "uucp" {>= "14.0.0" & < "15.0.0"}]
 depopts: ["uutf"
           "cmdliner"]
